@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account & Data – Hemoflex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --glass-bg: rgba(255, 255, 255, 0.9);
+      --text-color: #2d3436;
+      --text-secondary: #636e72;
+      --danger-color: #ff7675;
+      --shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background: #f8f9fa;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(106, 17, 203, 0.05) 0, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(37, 117, 252, 0.05) 0, transparent 50%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.2em;
+      background: var(--primary-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    .hero-text {
+      font-size: 1.1em;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #2d3436;
+      display: flex;
+      align-items: center;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--primary-gradient);
+      margin-right: 12px;
+      border-radius: 2px;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    li {
+      background: rgba(255, 255, 255, 0.6);
+      margin-bottom: 12px;
+      padding: 15px 20px;
+      border-radius: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
+    }
+
+    li:hover {
+      transform: translateX(5px);
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    li strong {
+      color: #6a11cb;
+      display: block;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .note-card {
+      background: linear-gradient(135deg, rgba(106, 17, 203, 0.05) 0%, rgba(37, 117, 252, 0.05) 100%);
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px dashed rgba(106, 17, 203, 0.2);
+      margin-top: 20px;
+    }
+
+    .note-card p {
+      font-size: 0.95em;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: var(--text-secondary);
+    }
+
+    .footer a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: #6a11cb;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="assets/icon.png" alt="Hemoflex Icon" class="logo">
+      <h1>Delete Account & Data</h1>
+      <p class="hero-text">
+        <strong>Hemoflex</strong> is a privacy-first, offline application.
+        Your data stays where it belongs—on your device.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>How to remove your data</h2>
+      <ol>
+        <li>
+          <strong>In-App Method</strong>
+          Open the app → Go to Side Menu Settings → Select "Delete my profile"
+        </li>
+        <li>
+          <strong>System Settings</strong>
+          Settings → Apps → Hemoflex → Storage → "Clear storage" or "Clear data"
+        </li>
+        <li>
+          <strong>Uninstall App</strong>
+          Removing the app from your device automatically deletes all local data
+        </li>
+      </ol>
+    </div>
+
+    <div class="note-card">
+      <h2>Already uninstalled?</h2>
+      <p>
+        Since Hemoflex does not store data on any external servers, once the app is uninstalled, your data is
+        permanently removed from your device. There is no server-side footprint to delete.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>Questions? Reach out to us at <a href="mailto:hemoflex@octapharma.com">hemoflex@octapharma.com</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
